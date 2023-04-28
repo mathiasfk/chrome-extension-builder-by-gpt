@@ -1,0 +1,18 @@
+{
+  "name": "Builder by GPT",
+  "version": "0.6.6",
+  "manifest_version": 3,
+  "action": {
+    "default_title": "Builder by GPT",
+    "default_popup": "popup.html"
+  },
+  "permissions": ["storage"],
+  "host_permissions": ["*://*.blip.ai/application/create/marketplace*"],
+  "content_scripts": [
+    {
+      "run_at": "document_idle",
+      "matches": ["*://*.blip.ai/application/create/marketplace*"],
+      "js": ["content-script.js"]
+    }
+  ]
+}
